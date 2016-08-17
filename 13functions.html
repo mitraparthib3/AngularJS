@@ -1,0 +1,27 @@
+<html>
+	<head>
+		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.0-beta.4/angular.min.js"></script>
+
+	</head>
+	<body>
+	<!-- 
+		$scope =  its a root object, to controlling the variables and functions
+	-->
+		<div ng-app="ang" ng-controller="ctrl">
+			<h2>{{data()}}</h2>	
+			
+		</div>
+		<script>
+			var angular=angular.module('ang',[]);
+			angular.controller('ctrl',function($scope){
+				$scope.name='james';
+				$scope.value1=40;
+				$scope.value2=50;
+				$scope.data=function(){
+				return "Name : "+$scope.name+" Sum of Two values : "+$scope.value1+$scope.value2;
+				}
+			});
+		</script>
+		
+	</body>
+</html>

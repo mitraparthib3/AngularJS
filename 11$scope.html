@@ -1,0 +1,24 @@
+<html>
+	<head>
+		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.0-beta.4/angular.min.js"></script>
+
+	</head>
+	<body>
+	<!-- 
+		$scope =  its a root object, to controlling the variables and functions
+	-->
+		<div ng-app="ang" ng-controller="ctrl">
+			<h2>{{"Name : "+student.name}}</h2>	
+			<h2>{{"Email : "+student.email}}</h2>	
+			<h2>{{"Marks : "+student.marks}}</h2>	
+			
+		</div>
+		<script>
+			var angular=angular.module('ang',[]);
+			angular.controller('ctrl',function($scope){
+				$scope.student={name:'sai',email:'sai@gmail.com',marks:332};
+			});
+		</script>
+		
+	</body>
+</html>

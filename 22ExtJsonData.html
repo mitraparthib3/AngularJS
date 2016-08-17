@@ -1,0 +1,29 @@
+<html>
+	<head>
+		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.0-beta.4/angular.min.js"></script>
+
+	</head>
+	<body>
+	<!-- 
+		ng-hide="true or false" -  to hide and show the tag.
+	-->
+		<div ng-app="ang" ng-controller="ctrl">
+			<table cellpadding="10" cellspacing="0" border='1' width="50%">
+				<tr><td>Sno</td><td>Roll no</td><td>Name</td><td>Email</td><td>Marks</td></tr>	
+				<tr ng-repeat="data in students"><td>{{data.sno}}</td><td>{{data.id}}</td><td>{{data.name}}</td><td>{{data.email}}</td><td>{{data.marks}}</td></tr>	
+			</table>
+			
+			
+		</div>
+		<script>
+			var angular=angular.module('ang',[]);
+			angular.controller('ctrl',function($scope,$http){
+				$http.get("jsonData.txt").success(function(response){
+					$scope.students=response;
+				})
+				
+			});
+		</script>
+		
+	</body>
+</html>

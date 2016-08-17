@@ -1,0 +1,19 @@
+<html>
+	<head>
+		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.0-beta.4/angular.min.js"></script>
+
+	</head>
+	<body>
+	<!-- 
+		object={name:'sai',marks:333};
+	-->
+		<div ng-app="" ng-init="student={name:'James',marks:456,id:100,email:'james@gmail.com'}">
+			<h1 ng-bind="'Name : '+student.name"></h1>
+			<h3 ng-bind="'Marks : '+student.marks"></h3>
+			<h3 ng-bind="'Id : '+student.id"></h3>
+			<h3 ng-bind="'Email : '+student.email"></h3>
+			
+		</div>
+		
+	</body>
+</html>

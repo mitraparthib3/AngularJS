@@ -1,0 +1,39 @@
+<html>
+	<head>
+		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.0-beta.4/angular.min.js"></script>
+
+	</head>
+	<body>
+	<!-- 
+		ng-hide="true or false" -  to hide and show the tag.
+	-->
+		<div ng-app="ang" ng-controller="ctrl">
+			<input type="text" ng-model="search" ng-keyup="disp()" ng-disabled="val2">
+			<input type="submit" value="submit" ng-click="disb()">
+			<table cellpadding="10" cellspacing="0" width="50%" ng-hide="val">
+				<tr><td ng-click="sortData('id')">ID</td><td ng-click="sortData('name')">Name</td><td ng-click="sortData('email')">Email</td><td ng-click="sortData('salary')">Salary</td></tr>
+				<tr ng-repeat="data in students|limitTo:num|filter:search"><td>{{data.id}}</td><td>{{data.name|uppercase}}</td><td>{{data.email|lowercase}}</td><td>{{data.marks|currency}}</td></tr>
+			</table>
+			
+		</div>
+		<script>
+			var angular=angular.module('ang',[]);
+			angular.controller('ctrl',function($scope){
+				$scope.students=[{name:'james',marks:534,id:100,email:'jAMes@gmail.com'},{name:'suresh',marks:434,id:101,email:'suresh@gMAl.com'},{name:'raINA',marks:464,id:102,email:'raina@gmail.COM'},{name:'sri',marks:531,id:103,email:'sri@gMAIl.com'},{name:'Bel',marks:531,id:104,email:'bel@gMAIl.com'},{name:'rock',marks:501,id:106,email:'rock@gMAIl.com'},{name:'vimal',marks:531,id:103,email:'vimal@gMAIl.com'}];
+				
+				$scope.val=true;
+				
+				$scope.val2=true;
+				
+				$scope.disp=function(){
+					$scope.val=false;
+				}
+				
+				$scope.disb=function(){
+					$scope.val2=!$scope.val2;
+				}
+			});
+		</script>
+		
+	</body>
+</html>

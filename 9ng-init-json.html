@@ -1,0 +1,19 @@
+<html>
+	<head>
+		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.0-beta.4/angular.min.js"></script>
+
+	</head>
+	<body>
+	<!-- 
+		expression : to contole the browser view -  {{}}
+	-->
+		<div ng-app="" ng-init="students=[{name:'james',marks:534,id:100,email:'james@gmail.com'},{name:'suresh',marks:434,id:101,email:'suresh@gmail.com'},{name:'raina',marks:464,id:102,email:'raina@gmail.com'},{name:'sri',marks:531,id:103,email:'sri@gmail.com'}]">
+			<table border="1" cellpadding="10" width="50%" cellspacing='0'>
+				<tr><td>ID</td><td>Name</td><td>Email</td><td>Marks</td></tr>	
+				<tr ng-repeat="data in students"><td>{{data.id}}</td><td>{{data.name}}</td><td>{{data.email}}</td><td>{{data.marks}}</td></tr>	
+			</table>
+			
+		</div>
+		
+	</body>
+</html>

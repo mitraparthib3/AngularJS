@@ -1,0 +1,22 @@
+<html>
+	<head>
+		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.0-beta.4/angular.min.js"></script>
+
+	</head>
+	<body>
+	<!-- 
+		expression : to contole the browser view -  {{}}
+	-->
+		<div ng-app="ang" ng-controller="ctrl">
+			<h2>{{name}}</h2>	
+			
+		</div>
+		<script>
+			var angular=angular.module('ang',[]);
+			angular.controller('ctrl',function($scope){
+				$scope.name='James';
+			});
+		</script>
+		
+	</body>
+</html>

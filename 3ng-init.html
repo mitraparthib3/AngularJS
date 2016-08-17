@@ -1,0 +1,19 @@
+<html>
+	<head>
+		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.0-beta.4/angular.min.js"></script>
+
+	</head>
+	<body>
+	<!-- 
+		ng-init : to initialise the values.
+	-->
+		<div ng-app="" ng-init="name='james';marks=456;id=100;val1=34;val2=12">
+		
+			<h2 ng-bind="'Name : '+name"></h2>
+			<h2 ng-bind="'Marks : '+marks"></h2>
+			<h2 ng-bind="'ID : '+id"></h2>
+			<h2 ng-bind="'Multiplication Of two values : '+val1*val2"></h2>
+		</div>
+		
+	</body>
+</html>

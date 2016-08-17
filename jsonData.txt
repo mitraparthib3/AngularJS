@@ -1,0 +1,6 @@
+[{"name":"sai","marks":"450","id":100,"sno":1,"email":"sai@gmail.com"},
+{"name":"suresh","marks":"420","id":101,"sno":2,"email":"suresh@gmail.com"},
+{"name":"vamsee","marks":"350","id":102,"sno":3,"email":"vamsee@gmail.com"},
+{"name":"james","marks":"460","id":103,"sno":4,"email":"james@gmail.com"},
+{"name":"naresh","marks":"650","id":104,"sno":5,"email":"naresh@gmail.com"},
+{"name":"sree","marks":"456","id":105,"sno":6,"email":"sree@gmail.com"}]

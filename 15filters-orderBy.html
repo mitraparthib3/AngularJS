@@ -1,0 +1,25 @@
+<html>
+	<head>
+		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.0-beta.4/angular.min.js"></script>
+
+	</head>
+	<body>
+	<!-- 
+		$scope =  its a root object, to controlling the variables and functions
+	-->
+		<div ng-app="ang" ng-controller="ctrl">
+			<table border="1" cellpadding="10" cellspacing="0" width="50%">
+				<tr><td>ID</td><td>Name</td><td>Email</td><td>Salary</td></tr>
+				<tr ng-repeat="data in students|orderBy:'name'"><td>{{data.id}}</td><td>{{data.name|uppercase}}</td><td>{{data.email|lowercase}}</td><td>{{data.marks|currency}}</td></tr>
+			</table>
+			
+		</div>
+		<script>
+			var angular=angular.module('ang',[]);
+			angular.controller('ctrl',function($scope){
+				$scope.students=[{name:'james',marks:534,id:100,email:'jAMes@gmail.com'},{name:'suresh',marks:434,id:101,email:'suresh@gMAl.com'},{name:'raINA',marks:464,id:102,email:'raina@gmail.COM'},{name:'sri',marks:531,id:103,email:'sri@gMAIl.com'},{name:'Bel',marks:531,id:104,email:'bel@gMAIl.com'},{name:'rock',marks:501,id:106,email:'rock@gMAIl.com'},{name:'vimal',marks:531,id:103,email:'vimal@gMAIl.com'}];
+			});
+		</script>
+		
+	</body>
+</html>

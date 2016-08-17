@@ -1,0 +1,19 @@
+<html>
+	<head>
+		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.0-beta.4/angular.min.js"></script>
+
+	</head>
+	<body>
+	<!-- 
+		arr=new Array("","")=["",""];
+	-->
+		<div ng-app="" ng-init="students=['james','suresh','rana','king']">
+			<table border="1" cellpadding="10" width="200">
+				<tr ><td>Name</td></tr>	
+				<tr ng-repeat="data in students"><td ng-bind="data"></td></tr>	
+			</table>
+			
+		</div>
+		
+	</body>
+</html>

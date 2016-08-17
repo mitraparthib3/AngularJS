@@ -1,0 +1,63 @@
+<html>
+	<head>
+		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.0-beta.4/angular.min.js"></script>
+		<style>
+			table tr td{
+			text-align:center;
+			}
+		</style>
+	</head>
+	<body>
+	<!-- 
+		
+	-->
+		<div ng-app="ang" ng-controller="ctrl">
+			
+			<table border="1" cellpadding="10" cellspacing="0" width="40%" ng-hide="val">
+				<tr><td>First Name</td><td colspan="2">{{student.fname}}</td></tr>
+				<tr><td>Last Name</td><td colspan="2">{{student.lname}}</td></tr>
+				<tr><td>Full Name</td><td colspan="2">{{student.fullname()}}</td></tr>
+				<tr><th>Sub</th><th>Marks</th><th>Rank</th></tr>
+				<tr ng-repeat="data in student.subs"><td>{{data.sub}}</td><td>{{data.marks}}</td><td>{{data.rank}}</td></tr>
+				<tr><td>Total</td><td>{{student.total()}}</td><td>{{student.avgRank()}}</td></tr>
+			</table>
+			
+		</div>
+		<script>
+			var angular=angular.module('ang',[]);
+			angular.controller('ctrl',function($scope){
+			
+			
+			$scope.student={fname:'sai',lname:'kishore',
+			fees:2000+'$',
+			fullname:function(){
+			return $scope.student.fname+" "+$scope.student.lname;
+			},
+			subs:[{sub:'maths',marks:90,rank:4},{sub:'physics',marks:80,rank:6},{sub:'Chemistry',marks:95,rank:1},{sub:'Telugu',marks:80,rank:9},{sub:'English',marks:84,rank:2},{sub:'Hindi',marks:91,rank:2}],
+			total:function()
+			{
+				var subMarks=$scope.student.subs;
+				var totalScore=0;
+				for(i=0;i<subMarks.length;i++)
+				{
+					totalScore+=subMarks[i].marks;
+				}
+				return totalScore;
+			},
+			avgRank:function(){
+				var subMarks=$scope.student.subs;
+				var subRank=0;
+				for(i=0;i<subMarks.length;i++)
+				{
+					subRank+=subMarks[i].rank;
+				}
+				return subRank/subMarks.length;
+			}
+			
+			};
+				
+			});
+		</script>
+		
+	</body>
+</html>
